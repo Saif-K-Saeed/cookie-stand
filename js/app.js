@@ -2,7 +2,7 @@
 
 
 
-let container = document.getElementById('container');
+let container = document.getElementById('cont');
 
 let tableEl = document.createElement('table');
 container.appendChild(tableEl);

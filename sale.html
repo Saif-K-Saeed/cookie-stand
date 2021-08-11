@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Salmon Cookies Sales </title>
+    <title>Salmon Cookies&trade; | Sales</title>
 </head>
+
 <body id="sales-page">
     <header class="sales">
         <div class="logo">SCookie</div>
@@ -18,11 +26,43 @@
             </h1>
         </div>
     </header>
-    <main>
-        <div id="cont">
+    <nav>
+        <ul class="nav">
+            <li id="home"><a href="index.html">Home</a></li>
+            <li id="sales">Sales</li>
+        </ul>
+    </nav>
+    <main class="sales">
+        <table id="tableSales">
+            <thead id="tableSalesHeader"></thead>
+            <tbody id="tableSalesBody"></tbody>
+            <tfoot id="tableSalesFooter"></tfoot>
+        </table>
+        <form id="formAddObject">
+            <fieldset>
+                <legend>Add New Store</legend>
 
-        </div>
+                <label for="storeLocation">Store Location</label>
+                <input name="storeLocation" type="text" required>
+                <br>
+                <label for="storeCustMin">Customers (Min)</label>
+                <input name="storeCustMin" type="number" min="0">
+
+                <label for="storeCustMax">Customers (Max)</label>
+                <input name="storeCustMax" type="number" min="0">
+
+                <label for="storeAvgSalePerCust">Avg.Sale per Customer</label>
+                <input name="storeAvgSalePerCust" type="number" step="0.1" min="0.0">
+                <br>
+                <button event="submit" >Add</button>
+            </fieldset>
+        </form>
+
+
     </main>
+
     <script src="js/app.js"></script>
+    
 </body>
+
 </html>
